@@ -1,0 +1,781 @@
+/*GENERALE*/
+
+*{
+  margin: 0;
+  --mov:#cc00ff;
+  font-family: 'Lato', sans-serif;
+}
+body {
+  font-size: 22px;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Merriweather', serif; 
+  font-weight: bold; 
+}
+
+/*MENIU*/
+header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;         
+  width: 100%;                  
+  background-color: #333;       
+  color: #D1C4E9 ;                 
+  padding: 3px 20px;          
+  
+  box-sizing: border-box; 
+  z-index: 1000;
+  position: sticky;   
+  top: 0;
+}
+
+header h1{
+  margin-left:20px;
+  letter-spacing:3px;
+  padding:7px;
+}
+nav > ul {
+  display: flex;       
+  list-style: none;    
+  padding-left: 0;      
+  margin: 0;  
+}
+nav li a{
+  color: #D1C4E9 ;
+  font-size: 22px;
+  letter-spacing:3px;
+  font-family: 'Merriweather', serif;
+  text-decoration:none;
+}
+nav li a:hover{
+  color: #730099 ;
+  font-weight: bold;
+}
+
+nav li {
+  margin-left: 20px; 
+  max-height:50px;
+  font-weight: normal;
+}
+
+.sub-menu {
+  list-style: none;
+  display: none; 
+  padding-left: 5px;
+}
+
+li:hover > .sub-menu {
+  display: block;
+  color: #D1C4E9 ;
+  background-color: #333;
+  width:150px;
+  font-weight: bold;
+  border-bottom: 15px solid #333;;
+  box-sizing: border-box;
+}
+
+/*PAGINA CAPITALE*/
+
+.info {
+  display: grid;
+  width: 80vw;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr;
+  gap:3vw;
+  margin-bottom: 100px !important;
+}
+
+.info > div {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); 
+  cursor: pointer;
+  
+  transition: all 0.5s ease;
+  z-index:0;
+  position: relative;
+  max-height: 20px;
+  
+}
+
+.info > div:hover {
+  background-color: #f9f9f9;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+  z-index: 10;
+  max-height: 300px;
+}
+
+
+.info div h3 {
+  margin: 0 0 10px 0;
+  color: #730099;
+}
+
+
+.info div p {
+  font-size:20px;
+  margin: 0; 
+  color: black;
+
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease-out, max-height 0.4s ease-out;
+}
+
+.info > div:hover p {
+  opacity: 1;
+  max-height: 200px; 
+}
+/*TABELE CAPITALE*/
+#tabele{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5vw; 
+  max-width: 70vw;
+  margin: 40px auto; 
+  padding: 0 20px;   
+  box-sizing: border-box; 
+}
+
+table{
+  font-size: 22px;
+  border-radius: 15px; 
+  overflow: hidden;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: none;
+  background-color: #E0E0E0; 
+  
+}
+ 
+th {
+  border-spacing: 0px 0px !important;
+  background-color: #730099;
+  color: white;             
+  font-weight: bold;
+  font-size:22px;
+  padding: 14px 10px;       
+  text-align: center;      
+}
+tbody tr:nth-child(2n+1){
+  background-color:#f5f5f5;
+  color: #730099;
+}
+tbody tr:nth-child(2n){
+  background-color: white;
+}
+
+td {
+  font-family: 'Merriweather', serif !important;
+  padding: 12px 10px;  
+  text-align: center;  
+  border-bottom: 2px solid #eee;
+}
+
+/*PAGINA QUIZ*/
+ .quiz {
+  margin-left:5vw;
+  margin-right:5vw;
+  margin-top: 2vw;
+  margin-bottom:2vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px; 
+}
+
+.item {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  border: 2px solid black;
+  background-color: white;
+  border-radius: 8px; 
+  overflow: hidden; 
+  text-align: center; 
+  transition: all 0.3s ease;
+}
+
+.item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+
+.item img {
+  width: 100%; 
+  height: auto; 
+  display: block; 
+}
+
+
+.item h3 a {
+   margin: 0 0 10px 0; 
+   color: #730099;
+   font-family:'Merriweather', serif;
+   font-weight: bold;
+}
+
+.item a {
+  text-decoration: none; 
+  color: #1a5276; 
+  transition: color 0.3s ease;
+}
+
+.item a:hover {
+  color: #39004d; 
+}
+
+/*PAGINA PENTRU FIECARE QUIZ*/
+
+.quiz-container {
+  max-width: 800px; 
+  margin: 40px auto; 
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+
+.forms {
+  background-color: #39004d; 
+  border-radius: 12px;       
+  padding: 25px;             
+  margin-bottom: 30px;       
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); 
+  color: white;     
+  display: grid;
+  grid-template-columns: 1fr;      
+}
+
+.question {
+  font-size: 30px; 
+  font-weight: bold;
+  margin-bottom: 25px; 
+  line-height: 1.4;  
+}
+
+.answer-options {
+  display: flex;       
+  flex-direction: column; 
+  gap: 10px;          
+  margin-bottom: 30px; 
+}
+
+
+.answer-option {
+  display: flex;        
+  align-items: center;  
+  background-color: #730099; 
+  border-radius: 8px;     
+  padding: 15px 20px;      
+  font-size: 24px;       
+  cursor: pointer;        
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+
+  /* ADAUGĂ ASTA: */
+  border: 3px solid transparent; /* Rezervăm loc pentru bordură ca să nu se miște butonul */
+}
+
+.answer-option:hover {
+  background-color: #ac00e6; 
+  transform: translateY(-2px); 
+}
+
+.answer-option .letter {
+  background-color:#8585ad; 
+  color: white;
+  font-weight: bold;
+  font-size: 24px; 
+  border-radius: 6px; 
+  width: 35px; 
+  height: 35px; 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px; 
+  flex-shrink: 0; /*marime fixa, nu se miscoreaza*/
+}
+
+
+.answer-option .text {
+  flex-grow: 1; /*marime variabila */
+  text-align: left; 
+}
+
+
+.submit-button {
+  display: block; 
+  width: 100%;
+  padding: 15px 20px;
+  background-color: #73bf76; 
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: #218838; 
+  transform: translateY(-2px);
+}
+.submit-button:visited {
+  background-color: #218838; 
+  transform: translateY(-2px);
+}
+
+/* --- CODE ADAUGAT PENTRU FUNCTIONALITATE JS --- */
+
+/* Când dai click pe o opțiune (o selectezi) */
+.answer-option.selected {
+    background-color: #ac00e6; /* Mov mai deschis, ca la hover */
+    border-color: #ffffff;     /* Bordură albă să se vadă că e ales */
+    transform: translateY(-2px);
+}
+
+/* Răspuns CORECT (Verde) */
+.answer-option.correct {
+    background-color: #28a745 !important; /* Verde */
+    border-color: #28a745;
+}
+
+/* Răspuns GREȘIT (Roșu) */
+.answer-option.wrong {
+    background-color: #dc3545 !important; /* Roșu */
+    border-color: #dc3545;
+}
+
+/* Ajustare pentru cerculețul cu litera (A, B, C...) când răspunsul e colorat */
+.answer-option.correct .letter,
+.answer-option.wrong .letter {
+    background-color: rgba(255, 255, 255, 0.3); /* Transparent */
+}
+
+/* Stilurile extrase pentru containerul de rezultat */
+#result-container {
+    display: none;       /* Era style="display: none;" */
+    text-align: center; 
+    background-color: #39004d; 
+    border-radius: 12px;       
+    padding: 25px;             
+    margin-bottom: 30px;       
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); 
+    color: white;     
+    
+      
+}
+
+/* Stilurile extrase pentru scor */
+#final-score {
+    font-size: 24px;     /* Era style="font-size: 24px;" */
+    margin-bottom: 20px; /* Era style="margin-bottom: 20px;" */
+}
+
+/* Stilurile extrase pentru butonul de restart */
+/* Folosim selectorul "#result-container .submit-button" ca să nu afectăm celelalte butoane */
+/*#result-container .submit-button {
+    background-color: #39004d; /* Era style="background-color: #39004d;" 
+}*/
+.final-btn.restart-btn {
+    background-color: #cc00ff !important;
+    width: 250px; 
+    margin: 0px auto;
+    display: block; 
+    width: 30%;
+    padding: 15px 20px;
+
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.final-btn:hover {
+  background-color: #ac00e6 !important; 
+  transform: translateY(-2px);
+}
+
+.bd{
+  background-color: #f5f5f5; 
+}
+
+.title {
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom:20px; 
+  margin-left: 10vw;
+  font-family: 'Merriweather', serif;
+  font-size: 36px; 
+  font-weight: bold; 
+  color: #2c3e50; 
+  letter-spacing: 0.5px; 
+}
+.title_q{
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom:20px; 
+  font-family: 'Merriweather', serif;
+  font-size: 40px; 
+  font-weight: 700; 
+  color: #2c3e50; 
+  letter-spacing: 0.5px; 
+}
+.subtitle {
+  text-align: center;
+  margin: 15px 100px !important; 
+  
+  font-family: 'Lato', serif;
+  font-size: 24px; 
+  color: #2c3e50; 
+}
+
+/*PAGINA PRINCIPALA*/
+#gol{
+  height:3vw;
+}
+.map{
+  margin-left:18vw;
+  margin-top:7vw;
+  align-items: center;
+  animation: map_animation 10s ease 1s infinite;
+}
+/*ANIMATIE MISCAT HARTA + ZOOM*/
+@keyframes map_animation {
+  0%   {transform: scale(1.3)  translate(10%,0%)}
+  20%   {transform: scale(1.8) translate(15%,10%)}
+  40%   {transform: scale(1.8) translate(12%,10%)}
+  60%   {transform: scale(1.8) translate(12%,-15%)}
+  70%   {transform: scale(1.8) translate(15%,-15%)}
+  80%   {transform: scale(1.8) translate(15%,-15%)}
+  90%   {transform: scale(1.8) translate(15%,-2%)}
+  100% {transform: scale(1.3)  translate(10%,0%)}
+}
+
+/*responsiveness*/
+@media (max-width: 768px) and (orientation: portrait) {
+   #tabele{
+    display: grid;
+    grid-template-columns: 1fr;
+   }
+
+   .info{
+    display: grid;
+    grid-template-columns: 1fr;
+   }
+}
+
+
+/* Login Page */
+.login-container {
+  max-width: 400px;
+  margin: 10vh auto 3vh auto;
+  background-color: #f5f5f5;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.login-container h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 36px;
+  color: #730099;
+  margin-bottom: 30px;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-container input {
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  font-family: 'Lato', sans-serif;
+  transition: border-color 0.3s ease;
+}
+
+.login-container input:focus {
+  border-color: #cc00ff;
+  outline: none;
+}
+
+.login-container button {
+  padding: 15px;
+  font-size: 20px;
+  background-color: #cc00ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Lato', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-container button:hover {
+  background-color: #730099;
+  transform: translateY(-2px);
+}
+
+
+/* ============================= */
+/* LINK REGISTER */
+.register-link {
+  margin-top: 20px;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+.register-link a,
+.btn-register,
+.btn-login {
+  background-color: #cc00ff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.register-link a:hover,
+.btn-register:hover,
+.btn-login:hover {
+  background-color: #730099;
+  transform: translateY(-2px);
+}
+
+/* ============================= */
+/* REGISTER PANEL */
+.register-panel {
+  display: none; /* ascuns implicit */
+  max-width: 400px;
+  margin: 5vh auto;
+  background-color: #f5f5f5;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* Afișare panel când checkbox-ul e bifat */
+#toggle-register:checked ~ .register-panel {
+  display: block;
+}
+
+/* ============================= */
+/* LINK / BUTOANE NAVIGARE ÎNTRE PAGINI */
+.register-link {
+  margin-top: 20px;
+  font-size: 18px;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+}
+
+/* Stil pentru link-ul care arată ca un buton */
+.btn-register,
+.btn-login {
+  background-color: #cc00ff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block; /* Important pentru ca padding-ul să funcționeze pe link */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-family: 'Lato', sans-serif;
+}
+
+.btn-register:hover,
+.btn-login:hover {
+  background-color: #730099;
+  transform: translateY(-2px);
+}
+
+/* ============================= */
+/* PANOURI LOGIN & REGISTER */
+.login-container,
+.register-panel {
+  max-width: 400px;
+  margin: 5vh auto;
+  background-color: #f5f5f5;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  
+  /* AM SCOS display: none - acum trebuie să fie vizibile mereu */
+  display: block; 
+}
+
+/* AM ȘTERS LOGICA DE TOGGLE/CHECKBOX (nu mai e necesară) */
+
+/* ============================= */
+/* TITLURI H1 */
+.login-container h1,
+.register-panel h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 36px;
+  color: #730099;
+  margin-bottom: 30px;
+}
+
+/* ============================= */
+/* FORMULARE */
+.login-container form,
+.register-panel form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* INPUTURI */
+.login-container input,
+.register-panel input {
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  font-family: 'Lato', sans-serif;
+  transition: border-color 0.3s ease;
+}
+
+.login-container input:focus,
+.register-panel input:focus {
+  border-color: #cc00ff;
+  outline: none;
+}
+
+/* BUTOANELE DE SUBMIT (LOGIN/REGISTER) */
+.login-container button[type="submit"],
+.register-panel button[type="submit"] {
+  padding: 15px;
+  font-size: 20px;
+  background-color: #cc00ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Lato', sans-serif;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-container button[type="submit"]:hover,
+.register-panel button[type="submit"]:hover {
+  background-color: #730099;
+  transform: translateY(-2px);
+}
+
+/* ============================= */
+/* FEEDBACK MESAJ (OPȚIONAL) */
+.feedback-register {
+ /* margin-top: 15px;*/
+  font-weight: bold;
+  text-align: center;
+  color: red;
+}
+
+/* ============================= */
+/* ============================= */
+/* LISTA DE CERINȚE PAROLĂ */
+.pass-requirements {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: -0.5px;
+  
+  /* 1. ASCUNDERE IMPLICITĂ (cu animație) */
+  max-height: 0;           /* Înălțime zero */
+  opacity: 0;              /* Invizibil */
+  overflow: hidden;        /* Ascunde conținutul */
+  margin: 0;               /* Fără spațiu când e ascuns */
+  transition: all 0.3s ease-in-out; /* Apariție lină */
+}
+
+.pass-requirements li {
+  margin-bottom: 0;        /* 2. SPAȚIU REDUS între rânduri */
+  line-height: 1.4;        /* Liniile mai apropiate */
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+/* ============================= */
+/* 3. TRUCUL MAGIC: Afișare la Focus */
+/* Când input-ul cu ID "passwordInput" este selectat, arată lista de sub el */
+#passwordInput:focus ~ .pass-requirements {
+  max-height: 150px;       /* Se deschide suficient cât să încapă lista */
+  opacity: 1;              /* Devine vizibil */
+  margin: 10px 0 15px 0;   /* Adaugă puțin spațiu doar când e deschis */
+}
+
+/* STARE INVALIDĂ (Roșu) */
+.pass-requirements li.invalid {
+  color: #ff4d4d;
+}
+.pass-requirements li.invalid::before {
+  content: '✖'; 
+  margin-right: 6px;
+  font-size: 18px;
+}
+
+/* STARE VALIDĂ (Verde) */
+.pass-requirements li.valid {
+  color: #2ecc71;
+}
+.pass-requirements li.valid::before {
+  content: '✔'; 
+  margin-right: 6px;
+  font-size: 18px;
+}
+
+.pass-requirements li {
+  margin-bottom: 2px;    /* Lipește rândurile între ele (era 5px) */
+  display: flex;         /* Aliniere perfectă iconiță-text */
+  align-items: center;   /* Centrează vertical iconița cu textul */
+  transition: color 0.3s ease;
+}
+
+/* STARE INVALIDĂ (Roșu) */
+.pass-requirements li.invalid {
+  color: #ff4d4d;
+}
+.pass-requirements li.invalid::before {
+  content: '✖'; 
+  margin-right: 6px;     /* Distanța dintre X și text */
+  font-size: 18px;       /* Iconița puțin mai mare */
+}
+
+/* STARE VALIDĂ (Verde) */
+.pass-requirements li.valid {
+  color: #2ecc71;
+}
+.pass-requirements li.valid::before {
+  content: '✔'; 
+  margin-right: 6px;     /* Distanța dintre Bifă și text */
+  font-size: 18px;       /* Iconița puțin mai mare */
+}
+
+.password-group {
+  display: flex;
+  flex-direction: column;
+  position: relative; /* Ajută la poziționare */
+}

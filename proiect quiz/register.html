@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="utf-8">
+    <title>Register - GEO-Pici</title>
+    <link rel="icon" href="assets/map.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+      <h1>Geografici pentru pitici!</h1>
+      <nav>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Capitalele</a></li>
+          <li>
+            <a href="">Quiz-uri ▾</a>
+            <ul class="sub-menu">
+              <li><a href="">Quiz 1</a></li>
+              <li><a href="">Quiz 2</a></li>
+              <li><a href="">Quiz 3</a></li>
+              <li><a href="">Quiz 4</a></li>
+              <li><a href="">Quiz 5</a></li>
+            </ul>
+          </li>
+            <li><a href="">Istoric </a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="register-panel" style="display: block;"> 
+        <h1>Register</h1>
+        <form id="register-form">
+          <input type="text" placeholder="Username" required pattern="[a-zA-Z0-9_.]+"  minlength="3" title="Folosește doar litere, cifre și simbolurile _ . ">
+          <input type="email" placeholder="Email" required>
+        <div class="password-group">
+            <input type="password" placeholder="Parolă" id="passwordInput" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*_\-+=.]).{7,}">
+            <ul class="pass-requirements">
+                <li id="req-length" class="invalid">Minim 7 caractere</li>
+                <li id="req-number" class="invalid">O cifră (0-9)</li>
+                <li id="req-upper" class="invalid">O majusculă (A-Z)</li>
+                <li id="req-special" class="invalid">Un caracter special (!@#$...)</li>
+            </ul>
+        </div>
+          <input type="password" placeholder="Confirmă Parola" required>
+          <button type="submit">Register</button>
+        </form>
+        <div class="register-link">
+          <p>Ai deja cont? 
+            <a href="index.html" class="btn-login">Login</a>
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <script src="register.js"></script>
+  </body>
+</html>

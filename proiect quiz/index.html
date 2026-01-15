@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="utf-8">
+    <title>Login - GEO-Pici</title>
+    <link rel="icon" href="assets/map.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+      <h1>Geografici pentru pitici!</h1>
+      <nav>
+        <ul>
+          <li><a href="">Home</a></li> 
+          <li><a href="">Capitalele</a></li>
+          <li>
+            <a href="">Quiz-uri ▾</a>
+            <ul class="sub-menu">
+              <li><a href="">Quiz 1</a></li>
+              <li><a href="">Quiz 2</a></li>
+              <li><a href="">Quiz 3</a></li>
+              <li><a href="">Quiz 4</a></li>
+              <li><a href="">Quiz 5</a></li>
+            </ul>
+          </li>
+            <li><a href="">Istoric </a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="login-container">
+        <h1>Login</h1>
+        <form id="login-form">
+          <input type="text" id="login-input" placeholder="Username sau Email" required>
+          
+          <input type="password" id="login-pass" placeholder="Parolă" required>
+          
+          <button type="submit">Login</button>
+        </form>
+
+        <div class="register-link">
+          <p>Nu ai cont? 
+            <a href="register.html" class="btn-register">Înregistrează-te</a>
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <script src="login.js"></script>
+  </body>
+</html>

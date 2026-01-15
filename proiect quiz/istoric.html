@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="utf-8">
+    <title>Login - GEO-Pici</title>
+    <link rel="icon" href="assets/map.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        /* STILURI SPECIFICE PENTRU PAGINA DE ISTORIC */
+        body {
+            background-color: #f4f4f9; /* Un fundal gri deschis */
+            font-family: sans-serif;
+        }
+
+        .history-container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 25px;
+        }
+
+        /* Butonul de înapoi */
+        .btn-back {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #555;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+        .btn-back:hover {
+            color: #007bff;
+        }
+
+        /* Cutia cu statistici (Media, Total teste) */
+        .stats-box {
+            background: #e7f3ff;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-left: 6px solid #007bff;
+            border-radius: 4px;
+            font-size: 1.1em;
+            color: #333;
+        }
+        
+        /* Tabelul */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+
+        /* Butonul de ștergere istoric */
+        .btn-clear {
+            display: block;
+            width: 100%;
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 12px;
+            margin-top: 30px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .btn-clear:hover {
+            background-color: #cc0000;
+        }
+    </style>
+</head>
+<body>
+    <header >
+      <h1>Geografici pentru pitici! </h1>
+      <nav>
+        <ul>
+          <li> <a href="home.html">Home</a> </li>
+          <li><a href="capitale.html">Capitalele </a></li>
+    
+          <li> <a href="quiz1.html">Quiz-uri ▾</a> 
+      
+            <ul class="sub-menu">
+              <li> <a href="q1.html">Quiz 1</a></li>
+              <li> <a href="q2.html">Quiz 2</a></li>
+              <li> <a href="q3.html">Quiz 3</a></li>
+              <li> <a href="q4.html">Quiz 4</a></li>
+              <li> <a href="q5.html">Quiz 5</a></li>
+            </ul>
+      
+          </li> 
+          <li><a href="istoric.html">Istoric </a></li>
+       </ul>
+      </nav>
+     
+
+    </header>
+
+
+    <div class="history-container">
+        <a href="quiz1.html" class="btn-back">⬅ Înapoi la Joc</a>
+        
+        <h1>Istoricul Tău</h1>
+
+        <div id="stats-container" class="stats-box">
+            Se încarcă statisticile...
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nume Test</th>
+                    <th>Dată & Oră</th>
+                    <th>Scor</th>
+                    <th>Procentaj</th>
+                </tr>
+            </thead>
+            <tbody id="history-table-body">
+                </tbody>
+        </table>
+
+        <button id="clear-history" class="btn-clear">Șterge tot istoricul meu</button>
+    </div>
+
+    <script src="istoric.js"></script>
+
+</body>
+</html>
